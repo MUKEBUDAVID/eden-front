@@ -1,6 +1,6 @@
 "use client"        
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, {  useEffect, useState } from 'react';
 
 interface Navprops{
@@ -13,14 +13,15 @@ interface Navprops{
 
 export default function Navlink({href,style,activeStyle,children}:Navprops) {
 
-    const route:string| any =useRouter().pathname;
-    const [styles, setStyles]=useState("");
+  const pathName = usePathname();
+    const [styles, setStyles]=useState(style);
+
 
     useEffect(()=>{
 
-     href==route ? setStyles(activeStyle): setStyles(style);
+     href==pathName ? setStyles(activeStyle): setStyles(style);
 
-},[route])
+},[])
 
   return (
    <Link href={href}  className={styles}>
