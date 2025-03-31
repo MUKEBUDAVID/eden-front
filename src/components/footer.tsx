@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import {  Link } from "react-router";
 
 function footer() {
   return (
@@ -6,7 +7,7 @@ function footer() {
     <section className="footer_top" >
 
     <div className="footer_left">
-        <span>EDEN</span>
+        <span>EDEN.</span>
 
 
         <p>
@@ -19,11 +20,35 @@ function footer() {
     </div>
 
     <div className="footer_center">
+      <aside>
+      <h3>Links</h3>
+
+      <Link to="/">Home</Link>
+      <Link to="/Shop">Shop</Link>
+      <Link to="/About">About</Link>
+      <Link to="/Contact">Contact</Link>
+      </aside>
         
+
+
+      <aside>
+      <h3>Help</h3>
+
+      <Link to="/">Payment Options</Link>
+      <Link to="/">Returns</Link>
+      <Link to="/">Privacy Policies</Link>
+      
+      </aside>
     </div>
 
 
     <div className="footer_right">
+      <h3>Newsletter</h3>
+
+      <div>
+        <input type="email" name="mail" id="mail" />
+        <span>SUBSCRIBE</span>
+        </div>      
         
     </div>
     

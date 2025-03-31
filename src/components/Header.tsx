@@ -6,8 +6,8 @@ function Header() {
     <header>
 
     <section className="home_left">
-      <Link to="/">
-   <img src="./img/eden_Logos-05@2x.svg" alt="eden logo"  />
+      <Link to="/" >
+   <img src="./img/eden_Logos-05@2x.svg" alt="eden logo"  title="logo" />
       </Link>
     <span>Eden</span>
     </section>

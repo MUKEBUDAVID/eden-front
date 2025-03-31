@@ -1,13 +1,13 @@
 @use "sass:map";
 @use "_variable" as * ;
-// @import "./_variable.scss"; 
+; 
 
 
 body{
   background:white;
   display: flex;
   width: 100%;
-  height: 150vw;
+  height: 120vw;
   flex-direction: column;
 }
 
@@ -83,10 +83,55 @@ header{
 main{
   background-color: blue;
   width: 100%;
-  height: 80%;
+  height: 100vw;
 }
+
 footer{
   background-color: yellow;
   width: 100%;
-  height: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+
+  .footer_top{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding-top: 50px;
+
+  }
+
+  .footer_left{
+    width: 300px;
+    height: 150px;
+    // background-color: violet;
+    display: flex;
+    flex-direction: column;
+  }
+.footer_left span{
+  font-family: "poppins",sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer_left p{
+  margin-top: 20px;
+  font-family: "poppins",sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #9F9F9F;
+}
+ 
+
+  .footer_botton{
+    width: 100%;
+    height: 20%;
+    
+  }
+
+
+
+
 }
