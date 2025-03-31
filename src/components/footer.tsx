@@ -45,10 +45,10 @@ function footer() {
     <div className="footer_right">
       <h3>Newsletter</h3>
 
-      <div>
-        <input type="email" name="mail" id="mail" />
-        <span>SUBSCRIBE</span>
-        </div>      
+      <form>
+        <input type="email" name="mail" id="mail" placeholder="Enter Your Email Address" />
+        <button type="submit" title="click" >SUBSCRIBE</button  >
+        </form>      
         
     </div>
     
