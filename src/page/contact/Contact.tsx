@@ -10,7 +10,7 @@ function Contact() {
     <>
     <HeadProvider>
             <div className="Home">
-              <Title>Conact</Title>
+              <Title>Contact</Title>
               <Link rel="canonical" href="http://jeremygayed.com/" />
               <Link rel="icon" type="image/svg+xml" href="/react.svg" />
               <Meta name="example" content="whatever" />
