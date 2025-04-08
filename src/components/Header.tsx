@@ -7,7 +7,7 @@ function Header() {
 
     <section className="home_left">
       <Link to="/" >
-   <img src="./img/eden_Logos-05@2x.svg" alt="eden logo"  title="logo" />
+   <img src="/img/eden_Logos.svg" alt="eden logo"  title="logo" />
       </Link>
     <span>Eden</span>
     </section>
@@ -20,9 +20,9 @@ function Header() {
      </nav>
 
      <section className="home_right">
-      <img src="img/globe.svg" alt="globe icon" />
-      <img src="img/shopping-cart.svg" alt=" shopping-cart logo" />
-      <img src="img/account.svg" alt=" account logo" />
+      <img src="/img/globe.svg" alt="globe icon" />
+      <img src="/img/shopping-cart.svg" alt=" shopping-cart logo" />
+      <img src="/img/account.svg" alt=" account logo" />
      </section>
     
 
