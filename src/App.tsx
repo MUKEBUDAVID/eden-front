@@ -1,8 +1,8 @@
 import "./style/App.scss";
 import { HeadProvider, Title, Link, Meta } from 'react-head';
-import Header from "./components/Header";
-import Main from "./components/main";
-import Footer from "./components/footer";
+import Header from "./components/layout/Header";
+import Main from "./components/layout/Main";
+import Footer from "./components/layout/Footer";
 
 
 function App() {
