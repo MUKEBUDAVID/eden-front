@@ -9,6 +9,7 @@ type ProduitType = {
   prix_reel?: number;
   devise?: string;
   etat: string;
+  img: string;
   solde: {
     toogle: boolean;
     pourcentage?: number;
@@ -25,24 +26,37 @@ interface ProduitProps {
 
 
 
-function Produit({cards}:ProduitProps) {
+function Produit({ cards }: ProduitProps) {
 
 
- return (
-    <div className="produit">
-           {cards.map((produit, index) => (
-        <div key={index}>
-          <h2>{produit.nom}</h2>
-          <p>{produit.descriptive}</p>
-          <p>Prix actuel: {produit.prix_actuele} {produit.devise}</p>
-          {produit.prix_reel && <p>Prix réel: {produit.prix_reel} {produit.devise}</p>}
-          <p>État: {produit.etat}</p>
-          {produit.solde.toogle && (
-            <p>Solde: {produit.solde.pourcentage}% de réduction</p>
+  return (
+    <>
+      {cards.map((produit, index) => (
+        <div key={index} className="card">
+          <img src={"/img/autresProduits/" + produit.img} alt={produit.nom} />
+          
+          <div className="bottom">
+
+          <span className="nom_produit">{produit.nom}</span>
+
+
+      <div className="prix_produit">
+        <span className="prix_actuele">{produit.prix_actuele.toLocaleString("de-DE")} fc </span>          
+        {produit.prix_reel && <span className="prix_reel">{produit.prix_reel} fc</span>}
+      </div>
+
+         {produit.solde.toogle && (
+            <span className="solde">{produit.solde.pourcentage} %</span>
           )}
+
+          </div>
+
         </div>
+
+        
       ))}
-    </div>
+    </>
+
   )
 }
 

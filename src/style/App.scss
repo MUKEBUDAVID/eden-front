@@ -235,8 +235,8 @@ main{
 
      .autreProduits{
       width: 100%;
-      height: 700px;
-      background-color: chocolate;
+      height: 800px;
+      // background-color: chocolate;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -250,18 +250,97 @@ main{
       .listProduits{
         width: 95%;
         height: 90%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        background-color: blueviolet;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        // background-color: blueviolet;
+        justify-content: space-around;
+        align-content: space-evenly;
+        justify-items: center;}
+
+
+    .card{
+      width: 250px;
+      height: 320px;
+      // border: 3px red solid;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      }
+
+    .card img{
+      width: 80%;
+      height:80% ;
+     
+    }
+    .bottom{
+      width: 80%;
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+    
+    .nom_produit{
+      font-family: "poppins",sans-serif;
+      font-size: 20px;
+      font-weight:400;
+ }
+ .prix_produit{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  // background-color: chocolate;
+
+ }
+ .prix_actuele{
+  font-family: "poppins",sans-serif;
+  font-size: 12px;
+  font-weight:600;
+
+ }
+
+ .prix_reel{
+  font-family: "poppins",sans-serif;
+  font-size: 10px;
+  font-weight:400;
+  color: #9F9F9F;
+  text-decoration: line-through;
+}
+
+.solde{
+  width: 50px;
+  height: 50px;
+  font-family: "poppins",sans-serif;
+  font-size: 15px;
+  font-weight:400;
+  color: #fff8f8;
+  border-radius: 50px;
+  background-color: map.get($theme-colors,"red_accent") ;
+  position: absolute;
+  top: 10px;
+  left: 161px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 
       }
 
+    
 
 
 
-
-
+ 
 
      }
 
@@ -269,7 +348,6 @@ main{
 
  
 
-}
 
 
 

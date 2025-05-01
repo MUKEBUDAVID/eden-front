@@ -1,11 +1,12 @@
 {
  "produits":[{
-    "nom":"skay",
+    "nom":"Skay",
     "descriptive":"Stylish cafe chair",
     "prix_actuele": 2500000,
     "prix_reel": 3500000,
     "devise":"fc",
     "etat":"new",
+    "img":"skay.png",
     "solde":{
         "toogle":true,
         "pourcentage":-30
@@ -17,6 +18,7 @@
     "descriptive":"Stylish cafe chair",
     "prix_actuele": 2500000,
     "devise":"fc",
+     "img":"berceau.png",
     "solde":{
         "toogle":false
         }
@@ -26,9 +28,10 @@
  {
     "nom":"Etoko",
     "descriptive":"Luxury big sofa",
-    "prix_actuele": 7000000,
-    "prix_reel": 14000000,
+    "prix_actuele": 70000,
+    "prix_reel": 140000,
     "devise":"fc",
+    "img":"etoko.png",
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -42,6 +45,7 @@
     "prix_actuele": 500000,
     "devise":"fc",
     "etat":"new",
+    "img":"siege_simple.png",
     "solde":{
         "toogle":false
         
@@ -53,6 +57,7 @@
     "descriptive":"Night lamp",
     "prix_actuele": 1500000,
     "devise":"fc",
+    "img":"siege_delux.png",
     "solde":{
         "toogle":false
         
@@ -65,6 +70,7 @@
     "prix_actuele": 150000,
     "devise":"fc",
     "etat":"new",
+    "img":"flocon.png",
     "solde":{
         "toogle":false
         
@@ -78,6 +84,7 @@
     "prix_reel": 14000000,
     "devise":"fc",
     "etat":"new",
+    "img":"capot.png",
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -90,11 +97,13 @@
     "prix_actuele": 500000,
     "devise":"fc",
     "etat":"new",
+    "img":"litMetallique.jpeg",
     "solde":{
         "toogle":false
       }
 
  }
+
  
  ]
    

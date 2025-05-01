@@ -9,6 +9,7 @@ type ProduitType = {
   prix_reel?: number;
   devise?: string;
   etat: string;
+  img:string;
   solde: {
     toogle: boolean;
     pourcentage?: number;
