@@ -35,7 +35,8 @@ function Produit({ cards }: ProduitProps) {
         <div key={index} className="card">
           <img src={"/img/autresProduits/" + produit.img} alt={produit.nom} />
           
-          <div className="bottom">
+
+       <div className="bottom">
 
           <span className="nom_produit">{produit.nom}</span>
 
@@ -51,6 +52,22 @@ function Produit({ cards }: ProduitProps) {
 
           </div>
 
+
+          <div className="hover">
+            <button type="button">Add to cart</button>
+
+            <div className="sociale_button">
+
+              <button type="button" className="share_btn"><img src="/img/share.svg" alt="share img"  /><span>Share</span></button>
+              <button type="button" className="like_btn"><img src="/img/like.svg" alt="like img"  /><span>Like</span></button>
+             
+            </div>
+           </div>
+
+
+
+           
+          
         </div>
 
         
