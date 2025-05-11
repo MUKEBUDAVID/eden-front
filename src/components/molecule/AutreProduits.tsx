@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Produit from "../atom/Produit.tsx";
+import VoirePlus from "../atom/VoirePlus.tsx";
 
  
 type ProduitType = {
@@ -34,12 +35,9 @@ useEffect(()=>{
   return response.json()
 
    }).then((json)=>{
-   console.log(json.produits);
    
-setcard(json)
+   setcard(json)
    
-  }).then(()=>{
-    console.log(card);
   })
 
   
@@ -54,6 +52,8 @@ setcard(json)
      <div className="listProduits">
      {card ? <Produit cards={card.produits} /> : <p>Chargement...</p>}
      </div>
+
+     <VoirePlus/>
 
     </section>
   )

@@ -1,5 +1,5 @@
 import "./style/App.scss";
-import { HeadProvider, Title, Link, Meta } from 'react-head';
+import { HeadProvider, Title, Link, Meta} from 'react-head';
 import Header from "./components/layout/Header";
 import Main from "./components/layout/Main";
 import Footer from "./components/layout/Footer";
@@ -16,7 +16,7 @@ function App() {
       <Link rel="canonical" href="http://jeremygayed.com/" />
       <Link rel="icon" type="image/svg+xml" href="/react.svg" />
       <Meta name="example" content="whatever" />
-     </div>
+    </div>
   </HeadProvider>
 
   <Header/>

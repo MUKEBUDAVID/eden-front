@@ -1,7 +1,7 @@
 import CallAction from "../atom/CallAction";
 import BestSeller from "../atom/BestSeller";
 import AutreProduits from "../molecule/AutreProduits";
-
+import Localisation from "../molecule/Localisation";
 
 function Main() {
   
@@ -13,6 +13,8 @@ return (
      <CallAction/>
      <BestSeller/>
      <AutreProduits/>
+     <Localisation/>
+     
 
     </main>
   )

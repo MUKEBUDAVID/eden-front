@@ -7,14 +7,14 @@ body{
   background:white;
   display: flex;
   width: 100%;
-  height: 120vw;
+  height: 550vh;
   flex-direction: column;
 }
 
 header{
   background-color: white;
   width: 100%;
-  height: 5vw;
+  height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,7 +83,7 @@ header{
 main{
   // background-color: blue;
   width: 100%;
-  height: 200vw;
+  height: 486vh;
 
 
   .presentation{
@@ -235,7 +235,7 @@ main{
 
      .autreProduits{
       width: 100%;
-      height: 800px;
+      height: 880px;
       // background-color: chocolate;
       display: flex;
       flex-direction: column;
@@ -408,7 +408,96 @@ main{
 
  }
 
+
+ .voirePlus{
+  margin-top: 50px;
+  width: 150px;
+  height: 35px;
+  color: map.get($theme-colors,primary);
+  border: map.get($theme-colors,primary) solid 1px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: border-radius ease-in-out 500ms ;
+  z-index: 5;
+ }
+
+ .voirePlus::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  width: 150px;
+  height: 35px;
+  background-color: map.get($theme-colors,primary);
+  border: map.get($theme-colors,primary) solid 1px;
+  transform: translate(-100%);
+  transition: transform ease-in-out 500ms ;
+  z-index: -5;
+
+  
+  }
+
+  .voirePlus:hover::before{
+    transform: translate(0%);
+    border-radius: 40px;
+
+    
+   }
+
+   .voirePlus:hover{
+    transform: translate(0%);
+    border-radius: 40px;
+    color: white;
+   }
+
+
       }
+
+
+.localisation{
+ width: 100%;
+ height:180vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding-top: 30px;
+//  background-color: yellow;
+
+ h2{
+   font-family: "poppins",sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+ }
+
+ 
+  #map{
+      width: 100%;
+      height: 400px;
+    }
+
+.imgLocal{
+  width:100%;
+  height: 105vh;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.select{
+  width: 200px;
+  font-family: "poppins",sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+
+
+}
+
+    
 
     
 
@@ -431,7 +520,7 @@ main{
 footer{
   // background-color: yellow;
   width: 100%;
-  height: 400px;
+  height: 52vh;
   display: flex;
   flex-direction: column;
 
