@@ -27,7 +27,7 @@ function AutreProduits() {
 
 useEffect(()=>{
   
-  fetch("./data.json").then((response)=>{
+  fetch("./data/produits.json").then((response)=>{
   
   if (!response.ok) {
       throw new Error("json error " + response.status);
