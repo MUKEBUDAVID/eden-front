@@ -9,7 +9,7 @@ import { cityMove} from "../../util/travel"
 
 function Localisation() {
 
-  const [selectedCity,setSelectedCity]=useState<string | undefined>("kinshasa");
+  const [selectedCity,setSelectedCity]=useState<string>("kinshasa");
   const [position,setPosition]=useState<LatLngExpression>([-4.4419311,15.2662931]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -21,13 +21,7 @@ function Localisation() {
   { value: "Matadi", label: "Matadi" },
   { value: "Muanda", label: "Muanda" }
 ]
-
-
-  useEffect(() => {
-    console.log(loading,error);
-    
-
-    const fetchCityPosition = async () => {
+  const fetchCityPosition = async () => {
       setLoading(true);
       setError(null);
       
@@ -45,8 +39,10 @@ function Localisation() {
       }
     };
 
-
-    fetchCityPosition();
+  useEffect(() => {
+    console.log(loading,error);
+    
+fetchCityPosition();
     
   }, [selectedCity]);
 
@@ -65,10 +61,10 @@ function Localisation() {
 
     <div className="imgLocal">
       
-      <Select className="select" options={cityOptions} defaultValue={cityOptions[0]} onChange={(getValue)=>{ setSelectedCity(getValue?.value)
+      <Select className="select" options={cityOptions} defaultValue={cityOptions[0]} onChange={(getValue)=>{ setSelectedCity(getValue?.value as string)
       }} />
 
-     <Mansory className="mansory1"/> 
+     <Mansory className="mansory1" selectedCity={selectedCity} position={position} setPosition={setPosition}/> 
 
      
      

@@ -498,6 +498,7 @@ main{
   height: 96vh;
   margin-top: 10px;
   // background-color: aqua ;
+
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -506,6 +507,11 @@ main{
   
   div {
     cursor: pointer;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+  
+    
   }
 
 
@@ -562,9 +568,10 @@ div:nth-child(7) {
  }
 
 .mansory1 img{
-  width: 95%;
-  height: 95%;
-  transition: all 300ms ease-in;
+  width: 100%;
+  height: 100%;
+ object-fit: cover;
+ transition: all 300ms ease-in;
 }
 
 
@@ -572,7 +579,6 @@ div:nth-child(7) {
   transform: scale(1.1);
   border: 2px solid #3E76EE;
 }
-
 
 }
 

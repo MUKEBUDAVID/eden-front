@@ -4,43 +4,43 @@
       "nom": "Place de la Gare",
       "latitude": -4.4419311,
       "longitude": 15.2662931,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Kinshasa_Gare_Central.jpg/800px-Kinshasa_Gare_Central.jpg"
+      "image": "/img/Rectangle1.png"
     },
     {
       "nom": "Stade des Martyrs",
       "latitude": -4.4009,
       "longitude": 15.2524,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Stade_des_Martyrs_de_la_Pentec%C3%B4te.jpg/800px-Stade_des_Martyrs_de_la_Pentec%C3%B4te.jpg"
+      "image": "/img/Rectangle2.png"
     },
     {
       "nom": "Tour de l'Échangeur de Limete",
       "latitude": -4.32758,
       "longitude": 15.31357,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Tour_de_l%27%C3%89changeur_de_Limete.jpg/800px-Tour_de_l%27%C3%89changeur_de_Limete.jpg"
+      "image": "/img/Rectangle3.png"
     },
     {
       "nom": "Palais du Peuple",
       "latitude": -4.3225,
       "longitude": 15.3219,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Palais_du_peuple_kinshasa.jpg/800px-Palais_du_peuple_kinshasa.jpg"
+      "image": "/img/Rectangle4.png"
     },
     {
       "nom": "Marché de la Liberté",
       "latitude": -4.3316,
       "longitude": 15.3089,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/March%C3%A9_de_la_Libert%C3%A9_-_Kinshasa.jpg/800px-March%C3%A9_de_la_Libert%C3%A9_-_Kinshasa.jpg"
+      "image": "/img/Rectangle5.png"
     },
     {
       "nom": "Mont Ngaliema",
       "latitude": -4.3167,
       "longitude": 15.2333,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Vue_de_Kinshasa_depuis_le_Mont_Ngaliema.jpg/800px-Vue_de_Kinshasa_depuis_le_Mont_Ngaliema.jpg"
+      "image": "/img/Rectangle6.png"
     },
     {
       "nom": "Université de Kinshasa",
       "latitude": -4.3777,
       "longitude": 15.2350,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Universit%C3%A9_de_Kinshasa.jpg/800px-Universit%C3%A9_de_Kinshasa.jpg"
+      "image": "/img/Rectangle7.png"
     }
   ],
 
