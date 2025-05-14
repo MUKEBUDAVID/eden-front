@@ -48,12 +48,12 @@ function Mansory({className,selectedCity,setPosition}:prorpsMansory) {
     }
   }
 
-  const moveInCity=(even:MouseEvent|any)=>{
+  const moveInCity=(even: MouseEvent<HTMLImageElement> )=>{
     even.preventDefault();
     even.stopPropagation();
-   const depotSelected=even.target.alt;
-    
-
+   const depotSelected=even.currentTarget.alt ;
+   
+   
     oneCity.forEach((depot)=>{
       if(depot.nom==depotSelected){
         setPosition([depot.latitude,depot.longitude])
@@ -72,11 +72,7 @@ function Mansory({className,selectedCity,setPosition}:prorpsMansory) {
 
 useEffect(()=>{
 
-
-   moveCity()
-
-   moveInCity()
-
+ moveCity()
 
 },[])
 
@@ -89,7 +85,7 @@ useEffect(()=>{
 { oneCity?.map((depot)=>{
 
  return( 
- <div key={depot.longitude} onClick={moveInCity}><img src={depot.image} alt={depot.nom} /></div> 
+ <div key={depot.longitude} ><img src={depot.image} onClick={moveInCity} alt={depot.nom} /></div> 
 
  )
 

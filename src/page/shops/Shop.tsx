@@ -1,7 +1,8 @@
-import React from "react";
+// import React from "react";
+import "../../style/shop.scss";
 import { HeadProvider, Title, Link, Meta } from 'react-head';
 import Header from "../../components/layout/Header";
-// import Main from "./components/main";
+import Main from "./layout/Main";
 import Footer from "../../components/layout/Footer";
 function Shop() {
   return (
@@ -16,7 +17,7 @@ function Shop() {
         </HeadProvider>
 
         <Header/>
-        <main></main>
+        <Main/>
         <Footer/>
     
     </>
