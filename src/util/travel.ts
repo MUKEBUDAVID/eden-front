@@ -14,8 +14,8 @@ interface Ville {
 
 interface VillesData {
   kinshasa: Ville[];
-  matadi: Ville[];
-  muanda: Ville[];
+  Matadi: Ville[];
+  Muanda: Ville[];
 }
 
 const DEFAULT_COORDINATES: LatLngExpression = [-4.4009, 15.2524];
@@ -32,7 +32,7 @@ export async function cityMove(
     }
 
     const data: VillesData = await response.json();
-    const { kinshasa, matadi, muanda } = data;
+    const { kinshasa, Matadi, Muanda } = data;
 
     if (!selectValue) {
       return DEFAULT_COORDINATES;
@@ -40,8 +40,8 @@ export async function cityMove(
 
     const villeMap: Record<string, LatLngExpression> = {
       [options[0].value]: [kinshasa[0].latitude, kinshasa[0].longitude],
-      [options[1].value]: [matadi[0].latitude, matadi[0].longitude],
-      [options[2].value]: [muanda[0].latitude, muanda[0].longitude],
+      [options[1].value]: [Matadi[0].latitude, Matadi[0].longitude],
+      [options[2].value]: [Muanda[0].latitude, Muanda[0].longitude],
     };
 
     return villeMap[selectValue] || DEFAULT_COORDINATES;

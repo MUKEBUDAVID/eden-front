@@ -1,0 +1,39 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  font-family: 'Arial', sans-serif;
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover:not(:disabled) {
+      background-color: #e0e0e0;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .pagination-nav {
+    font-weight: bold;
+  }
+
+  .pagination-page {
+    &.active {
+      background-color: #1976d2;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

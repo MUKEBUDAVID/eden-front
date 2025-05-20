@@ -1,0 +1,121 @@
+.oneProduit{
+    width: 100% ;
+    height: 200vh;
+    // background-color: rgb(0, 4, 255);
+
+.navigation{
+    width: 100%;
+    height: 80px;
+    background-color: #F9F1E7;
+    display: flex;
+   align-items: center;
+
+   .left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 100px;
+    width: 250px;
+    // background-color: coral;
+
+}
+
+.left a{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #9F9F9F;
+    text-decoration: none;
+
+}
+
+.separateur{
+    width:2px ;
+    height:30px;
+    background-color: #9F9F9F; 
+}
+
+
+
+.active{
+     font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0e0c0c !important;
+}
+
+
+}
+
+.presentation{
+    width: 100%;
+    height: 800px;
+    background-color: rgb(245, 234, 221);
+    margin-top: 50px;
+
+.left{
+    width: 55%;
+    height:800px ;
+    background-color: rgb(250, 201, 201);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    
+
+}
+.listItem{
+    // margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width:100px;
+    height: 500px;
+    // background-color: #92d329;
+    justify-content: space-between;
+   align-items: center;
+
+}
+
+.listItem img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+}
+
+
+.listItem img:hover{
+   transform: scale(1.2);
+}
+
+.active{
+    transform: scale(1.4) !important;
+
+}
+
+
+.item{
+   margin-top: 100px;
+   width: 50%;
+   height: 500px;
+//    background-color:#9F9F9F ; 
+}
+
+.item img{
+border-radius: 0px;
+ transition: all ease-in-out 300ms; 
+ cursor: pointer;
+}
+
+.item img:hover{
+ border-radius: 20px; 
+ transform: scale(1.2);  
+}
+
+
+}
+
+
+
+}

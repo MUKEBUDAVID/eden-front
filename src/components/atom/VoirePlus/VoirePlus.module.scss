@@ -1,0 +1,57 @@
+@use "sass:map";
+@use "../../../style/variable" as * ;
+
+
+.voirePlus{
+  margin-top: 50px;
+  width: 150px;
+  height: 35px;
+  color: map.get($theme-colors,primary);
+  border: map.get($theme-colors,primary) solid 1px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: border-radius ease-in-out 500ms ;
+  z-index: 5;
+ 
+ }
+ .voirePlus a{
+  text-decoration: none;
+  color:map.get($theme-colors,primary);
+
+ }
+
+ .voirePlus::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  width: 150px;
+  height: 35px;
+  background-color: map.get($theme-colors,primary);
+  border: map.get($theme-colors,primary) solid 1px;
+  transform: translate(-100%);
+  transition: transform ease-in-out 500ms ;
+  z-index: -5;
+
+  
+  }
+
+  .voirePlus:hover::before{
+    transform: translate(0%);
+    border-radius: 40px;
+
+    
+   }
+
+   .voirePlus:hover{
+    border-radius: 40px;
+    color: white;
+   }
+
+    .voirePlus:hover a{
+    color: white;
+   }
+
+

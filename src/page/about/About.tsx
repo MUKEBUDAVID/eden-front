@@ -1,8 +1,8 @@
 import React from "react";
 import { HeadProvider, Title, Link, Meta } from 'react-head';
-import Header from "../../components/layout/Header";
+import Header from "../../components/layout/Header/Header";
 // import Main from "./components/main";
-import Footer from "../../components/layout/Footer";
+import Footer from "../../components/layout/Fouter/Footer";
 
 
 function About() {

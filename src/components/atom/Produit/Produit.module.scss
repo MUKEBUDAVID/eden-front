@@ -1,0 +1,168 @@
+@use "sass:map";
+@use "../../../style/variable" as * ;
+
+.card{
+      width: 250px;
+      height: 320px;
+      // border: 3px red solid;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none !important;
+      color: black;
+
+
+
+&:hover :nth-child(3) {
+        
+        animation: hover_Amimate 300ms  cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        forwards ;
+      
+        }
+
+        @keyframes hover_Amimate {
+          from {
+          visibility: hidden;
+          }
+          
+        
+          to {
+            visibility: visible;
+            }
+        }
+
+
+    .card_img{
+      width: 100% !important;
+      height:80% !important;
+     
+    }
+    .bottom{
+      width: 80%;
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+    
+    .nom_produit{
+      font-family: "poppins",sans-serif;
+      font-size: 20px;
+      font-weight:400;
+ }
+ .prix_produit{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  // background-color: chocolate;
+
+ }
+ .prix_actuele{
+  font-family: "poppins",sans-serif;
+  font-size: 12px;
+  font-weight:600;
+
+ }
+
+ .prix_reel{
+  font-family: "poppins",sans-serif;
+  font-size: 10px;
+  font-weight:400;
+  color: #9F9F9F;
+  text-decoration: line-through;
+}
+
+.solde{
+  width: 50px;
+  height: 50px;
+  font-family: "poppins",sans-serif;
+  font-size: 15px;
+  font-weight:400;
+  color: #fff8f8;
+  border-radius: 50px;
+  background-color: map.get($theme-colors,"red_accent") ;
+  position: absolute;
+  top: 10px;
+  left: 161px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.hover{
+  width: 250px;
+  height: 350px;
+  position:absolute;
+  background-color:  rgba(119, 115, 115, 0.5);
+  display: flex; 
+  flex-direction:column; 
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  cursor:  pointer;
+}
+
+ .hover button{
+  width: 150px;
+  height: 35px;
+  background-color: #fff8f8;
+  border: none;
+  margin-bottom: 20px;
+  color: map.get($theme-colors, primary );
+  cursor: pointer;
+ }
+
+  .sociale_button{
+  width: 80%;
+  height: 35px;
+  display: flex; 
+  flex-direction:row; 
+  align-items: center;
+  justify-content: center;
+  // background-color: brown;
+  cursor: pointer;
+
+
+ }
+
+ .share_btn, .like_btn{
+ background-color:#66000000 !important ;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ color: #fff8f8 !important;
+ font-weight: bolder;
+ }
+ .sociale_button img{
+  width: 20px;
+  height: 20px;
+ }
+
+ .share_btn span, .like_btn span{
+  margin-left:5px;
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+      }
+
+      
