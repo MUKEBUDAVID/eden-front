@@ -50,22 +50,22 @@
 .presentation{
     width: 100%;
     height: 800px;
-    background-color: rgb(245, 234, 221);
+    // background-color: rgb(245, 234, 221);
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
 
 .left{
     width: 55%;
     height:800px ;
-    background-color: rgb(250, 201, 201);
+    // background-color: rgb(250, 201, 201);
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
-    
 
-}
-.listItem{
-    // margin-top: 100px;
+    .listItem{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     width:100px;
@@ -103,6 +103,8 @@
 }
 
 .item img{
+    width: 350px; 
+height: 350px;
 border-radius: 0px;
  transition: all ease-in-out 300ms; 
  cursor: pointer;
@@ -113,6 +115,19 @@ border-radius: 0px;
  transform: scale(1.2);  
 }
 
+    
+
+}
+
+
+ .right{
+   width: 45%;
+   height: 800px;
+   background: #e0dfdf;
+   margin-right: 2px;
+
+
+ }
 
 }
 
