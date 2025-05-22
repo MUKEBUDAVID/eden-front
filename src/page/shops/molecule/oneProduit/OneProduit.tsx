@@ -7,6 +7,70 @@ function OneProduit() {
 const[name,setName]=useState<string>("kilelo");
 const[urlItem,seturlItem]=useState<string | undefined>("Asgaardsofa3.png");
 const[active,setActive]=useState<Array<string>>(["active","","",""]);
+const[width,setWidth]=useState<string>("");
+const [sizeActive,setsizeActive]=useState<Array<string>>(["sizeActive","","",""]);
+const [quantite,setQuantite]=useState<number>(0);
+
+
+
+
+
+const changeQuantie=(event:React.MouseEvent<HTMLButtonElement>)=>{
+event.preventDefault();
+event.stopPropagation();
+
+const value =event.currentTarget.value as string; 
+
+
+if(value=="+" ){
+  setQuantite(quantite+1)
+
+};
+
+
+if(value=="-" && quantite>0){
+  setQuantite(quantite-1)
+
+};
+
+}
+
+const sizeClik=(event: React.MouseEvent<HTMLButtonElement>)=>{
+event.preventDefault();
+event.stopPropagation();
+console.log(width);
+const value =event.currentTarget.value as string; 
+
+setWidth(value);
+
+
+switch (value) {
+    case "90":
+      setsizeActive(["sizeActive","","",""]);
+      
+      break;
+
+      case "120":
+        setsizeActive(["","sizeActive","",""]);
+      
+      break;
+
+      case "140":
+         setsizeActive(["","","sizeActive",""]);
+      
+      break;
+      case "180":
+         setsizeActive(["","","","sizeActive"]);
+
+      break;
+  
+   
+  }
+  
+
+}
+
+
 
 const handleItemChange = (event: React.MouseEvent<HTMLImageElement>) => {
   event.preventDefault();
@@ -83,97 +147,118 @@ console.log(setName);
         <div className="right">
           <h1>Asgaard sofa</h1>
           <h3>Rs. 250,000.00</h3>
-          <div>
-            <img src="" alt=""  />
-            <img src="" alt=""  />
-            <img src="" alt=""  />
-            <img src="" alt=""  />
-            <img src="" alt=""  />
-            <div className="sepateur"> </div>
+          <div className="review">
+            <img src="/img/dashicons_star-filled.svg" alt="dashicons_star"  />
+            <img src="/img/dashicons_star-filled.svg" alt="dashicons_star"  />
+            <img src="/img/dashicons_star-filled.svg" alt="dashicons_star"  />
+            <img src="/img/dashicons_star-filled.svg" alt="dashicons_star"  />
+            <img src="/img/carbon_star-half.svg" alt="carbon_star-half"  />
+            <div className="separateur"> </div>
             <p>5 Customer Review</p>
           </div>
-          <p>
+          <p className="discription">
     Setting the bar as one of the loudest speakers in its class,
      the Kilburn is a compact, stout-hearted hero with a well-balanced 
      audio which boasts a clear midrange and extended highs for a sound.
- </p>
-          <div>
-            <span>Size</span>
-            <div>
-              <div>90</div>
-              <div>120</div>
-              <div>180</div>
-              <div className="speciale">
-                <button type="button">Largeur</button>
-              <input type="text" />
-              <button type="button">Longeur</button>
-              <input type="text" />
+               </p>
+          <div className="typeChoise">
+            <span className="size">Size</span>
 
+            <div className="dimension">
+              <div className="standart">
+              <button onClick={sizeClik} id={sizeActive[0]} value={"90"} type="button" title="90cm * 190cm">90 cm</button>
+              <button onClick={sizeClik} id={sizeActive[1]} value={"120"} type="button" title="120cm * 190cm">120 cm</button>
+              <button onClick={sizeClik} id={sizeActive[2]} value={"140"} type="button" title="140cm * 190cm">140 cm</button>
+              <button onClick={sizeClik} id={sizeActive[3]} value={"180"} type="button" title="180cm * 190cm">180 cm</button>
+               </div>
+
+              <div className="speciale">
+                <div className="taille">
+                <span>width</span>
+              <input type="number" min={1} />
+                </div>
+                
+                <div className="taille">
+              <span>length</span>
+              <input type="number" min={1} />
+                </div>
+              
               </div>
-            </div>
+             </div>
+
           </div>
 
           <div className="color">
-            <div>red</div>
-            <div>yello</div>
-            <div>blue</div>
+            <span>color</span>
+
+            <div className="colorList">
+            <div className="red"></div>
+            <div className="yello"></div>
+            <div className="blue"></div>
+            </div>
+            
           </div>
 
-          <div>
 
-            <div>
-              <button type="button"></button>
-              <span></span>
-              <button type="button"></button>
+          <div className="quantite">
+
+            <div className="choix_quantite">
+              <button onClick={changeQuantie} value={"+"} type="button" className="plus">+</button>
+              <span>{quantite}</span>
+              <button onClick={changeQuantie} value={"-"} type="button" className="Moin">-</button>
               </div>
 
-              <button type="button"> Add To Cart</button>
+              <button type="button" className="addToCardt"> Add To Cart</button>
 
           </div>
 
-          <div>
-            <div>
-              <p>
+
+            <ul className="share">
+              <li>
                <span>SKU</span> 
                <span>:</span>
-               <span>SS001</span>
-              </p>
+               <span> SS001</span>
+              </li>
 
-              <p>
+              <li>
                 <span>Category</span>
                 <span>:</span> 
                 <span>Sofas</span>
-               </p>
+               </li>
 
-              <p>
+              <li>
                 <span>Tags</span>
                 <span>:</span> 
                 <span>Sofa, Chair, Home, Shop</span>
 
-              </p>
+              </li>
 
-              <div>
+              <li>
                 <span>Share</span>
                 <span>:</span> 
-                <div>
-                  <a href="www.facebook.com">
+                <div className="logoSociaux">
+                  <a href="www.facebook.com" title="facebook">
                     <img src="/img/facebook.png" alt="facebook icon"  />
                      </a>
 
-                      <a href="www.linkedin.com">
+                      <a href="www.linkedin.com" title="linkedin">
                     <img src="/img/linkedin.png" alt="linkedin"  />
                      </a>
 
-                      <a href="www.twitter.com">
+                      <a href="www.twitter.com" title="twitter">
                     <img src="/img/twitter.png" alt="twitter"  />
                      </a>
                 </div>
+                </li>
 
-              </div>
+              </ul>
 
-            </div>
-          </div>
+           
+          
+
+
         </div>
+
       </div>
 
       <div className="description">
