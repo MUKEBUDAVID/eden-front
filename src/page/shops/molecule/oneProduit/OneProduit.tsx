@@ -2,6 +2,9 @@
 import { useState } from "react";
 import  "./OneProduit.scss";
 import { Link } from "react-router";
+import VoirePlus from "../../../../components/atom/VoirePlus/VoirePlus";
+import { useCardContext } from "../../../../context/CardContext";
+import Produit from "../../../../components/atom/Produit/Produit"
 
 function OneProduit() {
 const[name,setName]=useState<string>("kilelo");
@@ -10,10 +13,44 @@ const[active,setActive]=useState<Array<string>>(["active","","",""]);
 const[width,setWidth]=useState<string>("");
 const [sizeActive,setsizeActive]=useState<Array<string>>(["sizeActive","","",""]);
 const [quantite,setQuantite]=useState<number>(0);
+const [desActive,setDesActive]=useState<Array<string>>(["descriActive","",""]);
+ const {card}=useCardContext();
+
+ console.log(card);
+ 
 
 
 
 
+const handleDescripeChange=(event:React.MouseEvent<HTMLButtonElement>)=>{
+event.preventDefault();
+event.stopPropagation();
+
+const value =event.currentTarget.value;
+
+
+switch (value) {
+    case "0":
+      setDesActive(["descriActive","","",""]);
+      
+      break;
+
+      case "1":
+        setDesActive(["","descriActive","",""]);
+      
+      break;
+
+      case "2":
+         setDesActive(["","","descriActive"]);
+      
+      break;
+  
+   
+  }
+  
+
+
+}
 
 const changeQuantie=(event:React.MouseEvent<HTMLButtonElement>)=>{
 event.preventDefault();
@@ -69,8 +106,6 @@ switch (value) {
   
 
 }
-
-
 
 const handleItemChange = (event: React.MouseEvent<HTMLImageElement>) => {
   event.preventDefault();
@@ -262,18 +297,35 @@ console.log(setName);
       </div>
 
       <div className="description">
-        <div>
-        <h5>Description</h5>
-        <h5>Additional Information</h5>
-        <h5>Reviews[5]</h5>
+        <div className="titre">
+
+        <button onClick={handleDescripeChange} value={"0"} className={desActive[0]}>Description</button>
+        <button onClick={handleDescripeChange} value={"1"} className={desActive[1]}>Additional Information</button>
+        <button onClick={handleDescripeChange} value={"2"} className={desActive[2]}>Reviews[5]</button>
+
         </div>
         
-      <div>
-        <p></p>
+      <div className="text">
+        <p>
+        <span>Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
+           portable active stereo speaker takes the unmistakable look and 
+           sound of Marshall, unplugs the chords, and takes the show on the
+            road.</span>
+   <br />
+   <br />
+           <span>
+            Weighing in under 7 pounds, the Kilburn is a lightweight 
+            piece of vintage styled engineering. Setting the bar as one of 
+            the loudest speakers in its class, the Kilburn is a compact, 
+            stout-hearted hero with a well-balanced audio which boasts a 
+            clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the 
+            guitar-influenced leather strap enables easy and stylish travel.
+           </span>
+            </p>
 
-        <div>
-       <img src="/img/sofaottoman_1" alt="sofaottoman_1" />
-        <img src="/img/sofaottoman_2" alt="sofaottoman_2" />
+        <div className="descriptImg">
+       <img src="/img/sofaottoman_1.jpg" alt="sofaottoman_1" />
+        <img src="/img/sofaottoman_2.jpg" alt="sofaottoman_2" />
         </div>
         
       </div>
@@ -283,9 +335,15 @@ console.log(setName);
       <div className="related">
       <h2>Related Products</h2>
 
-      {/* <Produit/> */}
+<div className="listeProduit">
+  {card? <Produit rendererItem={4} cards={card.produits}/>:<p>Chargement...</p>}
+      
 
-      {/* <show more/> */}
+</div>
+      
+        <VoirePlus/>
+      
+
 
       </div>
         
