@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import callToAction from"./CallToAction.module.scss";
+
 function CallToAction() {
   return (
    <>

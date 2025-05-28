@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 import { HeadProvider, Title, Link, Meta } from 'react-head';
 import Header from "../../components/layout/Header/Header";
-// import Main from "./components/main";
+import Main from "./layout/Main";
 import Footer from "../../components/layout/Fouter/Footer";
 
 
@@ -18,7 +18,7 @@ function About() {
       </HeadProvider>
 
          <Header/>
-      <main></main>
+       <Main/>
           <Footer/>
       
     

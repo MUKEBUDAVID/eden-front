@@ -42,21 +42,31 @@ export const CardContext=createContext<StateContextType|undefined>(undefined);
 function CardContextProvider({children}:propsType){
     const [card,setCard]= useState<Cards | null>(null);
 
-useEffect(()=>{
-  fetch("./data/produits.json").then((response)=>{
+ const getCard = async () => {
+  try {
+    const response = await fetch("/data/produits.json");
     
     if (!response.ok) {
-        throw new Error("json error " + response.status);
+      throw new Error(`Failed to fetch data: ${response.status}`);
     }
-    return response.json()
 
-    }).then((json)=>{
-    
-    setCard(json)
-    
-    })
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("Fetched data is not JSON");
+    }
 
-  
+    const data = await response.json();
+    setCard(data);
+    
+  } catch (error) {
+    console.error("Error fetching card data:", error);
+    // Vous pourriez vouloir définir un état d'erreur ici
+  }
+};
+useEffect(()=>{
+  getCard()
+
+
 },[])
 
 
