@@ -4,7 +4,7 @@
 .mainAbout{
 //   background-color: rgb(57, 57, 100);
   width: 100%;
-  height: 200vh;
+  height: 300vh;
 
 .bannier{
  width: 100%;
@@ -37,6 +37,29 @@ p{
 }
 
 }  
+
+.presentation{
+    width:100%;
+    height: calc(100% - 430px);  
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .titre{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color:rgb(10, 10, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    }
+
+}
 
 
 }

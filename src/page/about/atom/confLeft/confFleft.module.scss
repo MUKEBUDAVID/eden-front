@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "../../../../style/variable" as * ;
+.confLeft{
+  width:50%;
+  height:300px;
+  // background-color: red;  
+  display: flex;
+  flex-direction: column;
+
+
+
+ h2{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color:black;
+    margin-left: 100px;
+
+}
+
+ h2::after{
+  content: "";
+  display: flex;
+  width:80%;
+  height: 5px;
+  background-color: map.get($theme-colors,"primary");
+}
+
+ p{
+    width:80%;
+    color: #848383;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: 100px;
+    margin-top: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
