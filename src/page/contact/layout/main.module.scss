@@ -1,0 +1,63 @@
+
+@use "sass:map";
+@use "../../../style/variable" as * ;
+
+.mainContact{
+    //   background-color: blue;
+  width: 100%;
+  height: 200vh;
+
+
+
+.contacts{
+    width: 100%;
+    height:calc(150vh - 80px) ;  
+    // background-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+
+}
+
+.title{
+    width: 80%;
+    height: 100px;
+    // background-color: yellowgreen;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.title h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color:rgb(10, 10, 10);
+}
+
+.title p{
+    width: 72%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color:#9F9F9F;
+    text-align: center;
+}
+
+.formulaire{
+    width: 100%;
+    height:90% ;  
+    // background-color: rgb(92, 92, 226);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 100px;
+
+}
+
+}
+
+

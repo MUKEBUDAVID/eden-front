@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "../../../../style/variable" as * ;
+.adresse{
+    width: 170px;
+    height:400px;
+    // background-color: rgb(255, 38, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+  .localisation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    width: 100%;
+    height: 100px;
+    // background-color: aqua;
+
+  } 
+  
+ .localisation h4{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color:rgb(10, 10, 10);
+ }
+ 
+  .localisation p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color:rgb(10, 10, 10);
+ } 
+}

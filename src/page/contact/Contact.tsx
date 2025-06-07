@@ -1,8 +1,8 @@
-import React from "react";
+// import React from "react";
 import { HeadProvider, Title, Link, Meta } from 'react-head';
 import Header from "../../components/layout/Header/Header";
-// import Main from "./components/main";
 import Footer from "../../components/layout/Fouter/Footer";
+import Main from "./layout/Main";
 
 
 function Contact() {
@@ -18,7 +18,7 @@ function Contact() {
     </HeadProvider>
 
     <Header/>
-    <main></main>
+    <Main/>
     <Footer/>
 
         

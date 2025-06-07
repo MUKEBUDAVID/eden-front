@@ -1,21 +1,27 @@
 import shop from "./Main.module.scss" ;
-import Publicite from "../atom/Publicite/Publicite";
+import Baniere from "../../../components/atom/Baniere/Baniere";
 import FiltreAndSearch from "../atom/FiltreAndSearch/FiltreAndSearch";
 import ListeProduit from "../molecule/ListeProduit/ListeProduit";
-import Baniere from "../atom/Baniere/Baniere";
+import Qualite from "../../../components/atom/Qualite/Qualite";
 function Main() {
-
+ const baniereData={
+  h1:"Shop",
+  to:"/",
+  title:"nav to home",
+  node1:"Home",
+  node2:"Shop"
+ }
 
   return (
     <main className={shop.mainShop}>
 
-  <Publicite/>
+  <Baniere  baniereData={baniereData}/>
     
   <FiltreAndSearch/>   
 
  <ListeProduit/>
 
- <Baniere/>
+ <Qualite/>
 
 
  </main  >
