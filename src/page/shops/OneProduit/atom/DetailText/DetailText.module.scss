@@ -1,0 +1,32 @@
+    .text{
+        width: 90%;
+        height: 700px;
+        // background-color: blueviolet;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #9F9F9F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+
+
+        .detailImg{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 300px;
+//   background-color: chocolate;
+  margin-top: 20px;
+    }
+
+    .detailImg img{
+        width: 50%;
+        height: 100%;
+
+    }
+
+
+    }
+

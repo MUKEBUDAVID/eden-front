@@ -1,0 +1,31 @@
+ .titre{
+    width: 700px;
+    height: 70px;
+    // background-color: #816DFA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+
+
+
+     button{
+    border: 0px solid transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #b9b9b9;
+    background-color: transparent;
+    cursor: pointer;
+    
+
+    }
+
+    .detailActive{
+        color: #000 !important;
+    }  
+    }
+
+  
+

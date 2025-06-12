@@ -1,0 +1,27 @@
+
+.related{
+    width: 100%;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: coral;
+
+    h2{
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 36px;
+        color: #000000;
+        
+    }
+
+    .listeProduit{
+        width: 90%;
+        height: 350px;
+        // background-color: red;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

@@ -7,10 +7,9 @@ import { Outlet, useLocation } from 'react-router';
 
 function Shop() {
   const  location =useLocation();
-console.log(location.pathname);
 
-
-  return (
+  
+return (
     <>
      <HeadProvider>
                 <div className="Home">

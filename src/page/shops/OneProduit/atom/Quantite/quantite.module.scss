@@ -1,0 +1,76 @@
+ .quantite{
+    width: 350px;
+    height: 50px;
+    // background-color: rebeccapurple;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+
+ .choix_quantite{
+    width: 100px;
+    height: 40px;
+    background: #fff9f9;
+    border-radius: 5px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px #9F9F9F solid;
+
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #161616;
+ }
+
+ .choix_quantite button{
+    width: 30px;
+    height: 100%;
+    background-color: transparent;
+    border: 0px solid black;
+    cursor: pointer;
+    transition: all ease 300ms;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #161616;
+ }
+
+ .choix_quantite button:active{
+  background-color: #B88E2F;
+  cursor: pointer;
+ }
+
+ .addToCardt{
+    width: 150px;
+    height: 40px;
+    border-radius: 8px ;
+    border: 0px solid black;
+    background-color: #cfcfcf;
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #161616;
+ }
+
+  .addToCardt:active{
+  background-color: #B88E2F;
+  cursor: pointer;
+ }
+
+
+
+
+
+
+
+
+ }
+

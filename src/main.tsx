@@ -7,7 +7,7 @@ import About from "./page/about/About.tsx";
 import Contact from "./page/contact/Contact.tsx";
 import Shop from "./page/shops/Shop.tsx";
 import CardContextProvider from "./context/CardContext.tsx";
-import OneProduit from "./page/shops/molecule/oneProduit/OneProduit.tsx";
+import OneProduit from "./page/shops/OneProduit/OneProduit.tsx";
 
 createRoot(document.getElementById('root')!).render(
  
