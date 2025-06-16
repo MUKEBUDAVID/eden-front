@@ -11,7 +11,7 @@ function NavBar() {
     
     
   return (
-       <div className={navBarStyle.navigation}>
+       <section className={navBarStyle.navigation}>
       
         <div className={navBarStyle.left}>
 
@@ -26,7 +26,7 @@ function NavBar() {
 
           </div> 
         
-      </div>
+      </section>
   )
 }
 

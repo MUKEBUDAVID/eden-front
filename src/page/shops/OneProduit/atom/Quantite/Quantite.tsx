@@ -1,4 +1,5 @@
 import {useState} from "react";
+import { Link } from "react-router";
 import quantiteStyle from "./quantite.module.scss"
 
 function Quantite() {
@@ -37,7 +38,10 @@ if(value=="-" && quantite>0){
               <button onClick={changeQuantie} value={"-"} type="button" className={ quantiteStyle.Moin}>-</button>
               </div>
 
+              <Link to={"/Shop/Carts"} title="add to cart">
+
               <button type="button" className={ quantiteStyle.addToCardt}> Add To Cart</button>
+              </Link>
 
           </div>
   )

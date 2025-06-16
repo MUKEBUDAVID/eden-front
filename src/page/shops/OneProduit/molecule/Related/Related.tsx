@@ -9,7 +9,7 @@ function Related() {
      const {card}=useCardContext();
     
   return (
-    <div className={relatedStyle.related}>
+    <section className={relatedStyle.related}>
       <h2>Related Products</h2>
 
 <div className={relatedStyle.listeProduit}>
@@ -19,10 +19,7 @@ function Related() {
 </div>
       
         <VoirePlus/>
-      
-
-
-      </div>
+  </section>
   )
 }
 

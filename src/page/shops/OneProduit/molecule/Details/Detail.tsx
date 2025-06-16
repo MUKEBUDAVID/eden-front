@@ -8,10 +8,10 @@ function Description() {
 
 
   return (
-         <div className={detailStyle.detail}> 
+         <section className={detailStyle.detail}> 
          <DetailTitre/>
           <DetailText/>
-         </div>
+         </section>
   )
 }
 

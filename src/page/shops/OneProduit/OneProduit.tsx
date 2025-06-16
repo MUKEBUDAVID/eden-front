@@ -8,14 +8,14 @@ import oneProduitStyle from  "./OneProduit.module.scss";
 function OneProduit() {
 return (
 
-    <section className={oneProduitStyle.oneProduit}>
+    <main className={oneProduitStyle.oneProduit}>
 
     <NavBar/>  
   <Presentation/>
   <Details/>
   <Related/>
 
-  </section>
+  </main>
   )
 }
 

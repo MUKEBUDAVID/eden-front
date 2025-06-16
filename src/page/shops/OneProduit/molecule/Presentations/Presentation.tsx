@@ -6,12 +6,12 @@ function Presentation() {
 
  
 return (
-    <div className={presentationStyle.presentation}>
+    <section className={presentationStyle.presentation}>
 
 <PresentationLeft/>
 
 <PresentationRight/>
-    </div>
+    </section>
 
   )
 }

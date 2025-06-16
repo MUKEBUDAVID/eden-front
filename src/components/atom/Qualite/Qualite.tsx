@@ -7,7 +7,7 @@ function Baniere() {
   <section className={qualite.Qualites}>
 
     <div className={qualite.ban}>
-      <img src="./img/Group.png" alt="Group" />
+      <img src="/img/Group.png" alt="Group" />
       <div className={qualite.qualite}>
         <span>High Quality</span>
         <span>crafted from top materials</span>
@@ -15,7 +15,7 @@ function Baniere() {
     </div>
 
     <div className={qualite.ban}>
-      <img src="./img/Vector.png" alt="Vector" />
+      <img src="/img/Vector.png" alt="Vector" />
       <div className={qualite.qualite}>
         <span>Warranty Protection</span>
         <span>Over 2 years</span>
@@ -23,7 +23,7 @@ function Baniere() {
     </div>
 
     <div className={qualite.ban}>
-      <img src="./img/shipping.png" alt="shipping" />
+      <img src="/img/shipping.png" alt="shipping" />
       <div className={qualite.qualite}>
         <span>Free Shipping</span>
         <span>Order over 150 $</span>
@@ -31,7 +31,7 @@ function Baniere() {
     </div>
 
     <div className={qualite.ban}>
-      <img src="./img/customer-support.png" alt="customer-support" />
+      <img src="/img/customer-support.png" alt="customer-support" />
       <div className={qualite.qualite}>
         <span>24 / 7 Support</span>
         <span>Dedicated support</span>
