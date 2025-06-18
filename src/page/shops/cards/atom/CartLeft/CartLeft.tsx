@@ -28,8 +28,8 @@ function CartLeft() {
       <td><input type="number" min={1} className={cartLeftStyle.quantity} /></td>
      
       <td >
-        <div className={cartLeftStyle.subTotal}>
-<p className={cartLeftStyle.price}>250.000.00 fc</p>
+        <div className={cartLeftStyle.DivsubTotal}>
+<p className={cartLeftStyle.subTotal}>250.000.00 fc</p>
 
     <img src="/img/antdelete.svg" title="antdelete" alt="antdelete" className={cartLeftStyle.antdelete} />
 
