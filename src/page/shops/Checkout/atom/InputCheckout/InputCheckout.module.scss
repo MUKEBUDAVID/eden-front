@@ -1,0 +1,32 @@
+@use "sass:map";
+@use "../../../../../style/variable" as * ;
+
+//  font-family: "Poppins", sans-serif;
+//    font-weight: 500;
+//     font-size: 10px
+// }
+
+.inputCheckout{
+    width: 50%;
+    height: 80px;
+    // background-color: chocolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    label{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    width: 150%;
+}
+
+input{
+    width: 180px;
+    height:40px ;
+    border: 1px solid #9F9F9F;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+}

@@ -1,6 +1,6 @@
 // import React from 'react'
 import cartRightStyle from "./cartRight.module.scss";
-
+import { Link } from "react-router";
 function CartRight() {
   return (
     <div className={cartRightStyle.right}>
@@ -11,7 +11,9 @@ function CartRight() {
       <div className={cartRightStyle.total}> <span>Total</span> <span>250.000.00 fc</span></div>
     </div>
 
+<Link to={"/Shop/Checkout"} title="Checkout">
     <button type="button" className={cartRightStyle.checkBtn}> Check Out</button>
+</Link>
 
     </div>
   )

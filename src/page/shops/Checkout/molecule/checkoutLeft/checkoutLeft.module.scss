@@ -1,0 +1,57 @@
+@use "sass:map";
+@use "../../../../../style/variable" as * ;
+
+.checkoutLeft{
+    width: 50%;
+    height: 90%;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 36px  
+    }
+    
+    .name{
+        width: 80%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        // background-color: aquamarine;
+        
+    }
+
+    .adresse{
+    height: 80%;
+    width: 50%;
+    // background-color: brown;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-right: 10%;
+
+ #inputStyle{
+    width: 180%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+
+  
+}
+
+
+}
+
+  
+
+}

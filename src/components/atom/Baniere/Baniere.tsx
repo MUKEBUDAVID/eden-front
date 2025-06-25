@@ -21,7 +21,8 @@ function Baniere({baniereData}:Props) {
       <p className={baniere.shopNav}>
         <Link to={baniereData.to} title={baniereData.title}>{baniereData.node1}</Link>
         <span>{">"}</span>
-        <span title="page actuel">{baniereData.node2}</span></p>
+        <span title="page actuel">{baniereData.node2}</span>
+        </p>
       
       </section>
   )
