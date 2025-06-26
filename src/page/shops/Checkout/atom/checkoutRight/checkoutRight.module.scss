@@ -1,0 +1,223 @@
+@use "sass:map";
+@use "../../../../../style/variable" as * ;
+
+.checkoutRight{
+    width: 50%;
+    height: 50%;
+    // background-color: red;
+    // margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around  ;
+
+.proSub{
+    width: 100%;
+    height: 30%;
+    // background: #000;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.proSub li{
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // background: #54db1f;
+}
+.titre{
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+     font-size: 24px
+}
+
+.item span:nth-child(1) span:nth-child(1){
+    color: #9F9F9F;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px
+
+}
+
+.item span:nth-child(1) span:nth-child(2),
+span:nth-child(3)
+{
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px
+
+}
+
+.item span:nth-child(2){
+    color: rgb(19, 18, 18);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px 
+}
+.sub span:nth-child(1){
+   font-family: "Poppins", sans-serif;
+    font-weight: 500;
+     font-size: 16px
+}
+
+.sub span:nth-child(2){
+    color: rgb(19, 18, 18);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px 
+}
+
+.total span:nth-child(1){
+  font-family: "Poppins", sans-serif;
+    font-weight: 500;
+     font-size: 16px
+   
+}
+
+
+.total span:nth-child(2){
+    color:map-get($theme-colors, primary);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px 
+}
+
+hr{
+    width: 80%;
+    height: 2px;
+    background-color:#9F9F9F ;
+    // margin-top: -40px;
+}
+
+.bankNotice{
+    width: 80%;
+    height: 40%;
+    // background-color: chocolate;
+}
+
+h5{
+    width: 38%;
+    height: 10%;
+    // background-color: aquamarine;
+    display: flex;
+    color:black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.blackSphere{
+    width:15px ;
+    height: 15px;
+    border-radius: 50px;
+    background: #000;
+}
+
+.notice_1{
+    margin-top: 10px;
+    color:#9F9F9F;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 16px 
+
+}
+
+.choisePay{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 40%;
+    height: 65px;
+    // background-color: rgb(30, 210, 180);
+    margin-top: 20px;
+    color:#9F9F9F;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 16px 
+    
+}
+
+.choisePay p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.choisePay span{
+ margin-left: 20px;
+
+}
+
+.choisePay input{ 
+
+ appearance: none; // Hide default radio button
+      width: 20px;
+      height: 20px;
+      border: 2px solid gray;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+
+      &:checked {
+        border-color: gray; // Style when checked
+        &::after {
+          content: '';
+          width: 15px;
+          height: 15px;
+          background-color: gray;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+
+}
+
+.notice_2{
+    color:black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 13px ;
+    margin-top: 20px;
+
+}
+
+.notice_2 span{
+    font-weight: 500;
+
+}
+
+button{
+
+ width: 200px;
+ height: 50px;
+ border-radius: 10px;
+ border: 1px solid black;
+ background-color: transparent;
+ color:black;
+ font-family: "Poppins", sans-serif;
+ font-weight: 400;
+ font-size: 13px ;
+ cursor: pointer;
+ transition: all 300ms ease-in-out;
+}
+button:active{
+  transform: scale(1.1);
+}
+}

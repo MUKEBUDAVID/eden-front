@@ -3,6 +3,7 @@ import Baniere from "../../../components/atom/Baniere/Baniere";
 import Qualite from "../../../components/atom/Qualite/Qualite";
 import checkoutStyle from "./checkout.module.scss";
 import CheckoutLeft from "./molecule/checkoutLeft/CheckoutLeft";
+import CheckoutRight from './atom/checkoutRight/CheckoutRight'; 
 
 interface FormDataType{
       firstName: { value: string };
@@ -83,8 +84,8 @@ function Checkout() {
 
       <CheckoutLeft/>
 
-      {/* <checkoutRight/> */}
-      <div>papa</div>
+      <CheckoutRight/>
+      
       </form>
 
       <Qualite/>
