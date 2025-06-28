@@ -17,7 +17,7 @@ function NavBar() {
 
           <Link to={"/"}>Home</Link> 
         <img src="/img/VectorArrow.svg" alt="VectorArrow"  />
-        <Link to={"/shop"}>Shop</Link>
+        <Link to={"/Shop"}>Shop</Link>
         <img src="/img/VectorArrow.svg" alt="VectorArrow"  />
 
         <div className={navBarStyle.separateur}></div>
