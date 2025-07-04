@@ -1,6 +1,6 @@
 import {  createContext,useState ,Dispatch,SetStateAction, ReactNode, useEffect,useContext} from "react";
 
-type ProduitType = {
+export type ProduitType = {
   nom: string;
   descriptive: string;
   prix_actuele: number;
@@ -12,10 +12,17 @@ type ProduitType = {
     toogle: boolean;
     pourcentage?: number;
   };
+ size?:{
+    width:string,
+  length:string,
+  heigh:string
+ }
+
 };
 
 type Cards = {
   produits: ProduitType[];
+ 
 };
 
 type propsType={
@@ -25,7 +32,13 @@ type propsType={
 
 interface StateContextType {
     card: Cards|null,
-    setCard: Dispatch<SetStateAction<Cards | null>>;
+    setCard: Dispatch<SetStateAction<Cards | null>>,
+
+    oneCard:ProduitType|null,
+    setOneCard:Dispatch<SetStateAction<ProduitType|null>>
+
+    buyCard: ProduitType[]|null,
+    setBuyCard:Dispatch<SetStateAction< ProduitType[] | null>>
 
 
 }
@@ -41,6 +54,8 @@ export const CardContext=createContext<StateContextType|undefined>(undefined);
 
 function CardContextProvider({children}:propsType){
     const [card,setCard]= useState<Cards | null>(null);
+    const [oneCard,setOneCard]=useState<ProduitType |null>(null);
+    const [buyCard,setBuyCard]=useState<ProduitType[] | null>(null)
 
  const getCard = async () => {
   try {
@@ -72,7 +87,7 @@ useEffect(()=>{
 
 
     return(
-    <CardContext.Provider value={{card,setCard}}>
+    <CardContext.Provider value={{card,setCard,oneCard,setOneCard,buyCard,setBuyCard}}>
         {children}
 </CardContext.Provider>
     )

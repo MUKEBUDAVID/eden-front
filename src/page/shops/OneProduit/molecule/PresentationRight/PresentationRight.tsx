@@ -9,7 +9,9 @@ import rightStyle from"./PresentationRight.module.scss";
 
 
 
+
 function PresentationRight() {
+   
 
     return (
      <div className={rightStyle.right}>

@@ -1,11 +1,14 @@
 // import React from 'react'
 import titreStyle from "./titre.module.scss"
+import { useCardContext } from "../../../../../context/CardContext";
 
 function Titre() {
+  const {oneCard}=useCardContext();
+
   return (
       <div className={titreStyle.titre} >
-           <h1>Asgaard sofa</h1>
-          <h3>Rs. 250,000.00</h3>
+           <h1>{oneCard?.nom}</h1>
+          <h3>{oneCard?.prix_reel}</h3>
           </div>
   )
 }

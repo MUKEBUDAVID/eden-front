@@ -1,7 +1,7 @@
 // import React from "react";
 import { Link } from "react-router";
 import card from "./Produit.module.scss";
-
+import { useCardContext } from "../../../context/CardContext";
 
 
 type ProduitType = {
@@ -27,12 +27,18 @@ interface ProduitProps {
 
 function Produit({ cards, rendererItem }: ProduitProps) {
 
+   const {setOneCard}=useCardContext();
 
+  const setOneProduit=(produit:ProduitType)=>{
+    
+  setOneCard({...produit})
+
+  }
   return (
     <>
       {cards.map((produit, index) => (
         index<rendererItem?
-        <Link to={"/Shop/oneProduit"} key={index} className={card.card}>
+        <div  key={index} className={card.card} >
           <img className={card.card_img} src={"/img/autresProduits/" + produit.img} alt={produit.nom}  />
           
 
@@ -54,7 +60,13 @@ function Produit({ cards, rendererItem }: ProduitProps) {
 
 
           <div className={card.hover}>
-            <button type="button">Add to cart</button>
+
+            <button type="button" className={card.add} onClick={()=>setOneProduit(produit)}> 
+              <Link to={"/Shop/oneProduit"}>
+              Add to cart
+              </Link>
+
+            </button>
 
             <div className={card.sociale_button}>
 
@@ -68,7 +80,7 @@ function Produit({ cards, rendererItem }: ProduitProps) {
 
            
           
-        </Link>
+        </div>
         :null
 
         

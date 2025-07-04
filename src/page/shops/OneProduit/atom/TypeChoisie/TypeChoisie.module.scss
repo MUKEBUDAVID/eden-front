@@ -25,6 +25,8 @@
     justify-content: space-between;
     align-items: center;
     width:100%;
+    
+
 
 }
 
@@ -36,33 +38,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+}
+
+.standart span,li{
+    font-size: 12px !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500 !important;
+    
 }
 
 
-.standart button{
-    width: 44px;
-    height: 44px;
-    border: 0px solid black;
-    border-radius: 10px;
-    background-color: #cfcfcf;;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 10px;
-    color: #0f0e0e;
-    transition: all ease-in-out 300ms;
-    cursor: pointer;
 
-}
-#sizeActive{
-background-color: #B88E2F;
-cursor: pointer;
-}
 
-.standart button:hover{
-background-color: #B88E2F;
-    cursor: pointer;
-
-}
 
 .speciale{
     width: 220px;

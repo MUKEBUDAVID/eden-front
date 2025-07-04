@@ -1,10 +1,12 @@
 import { useState } from "react";
 import presentationLeftStyle from "./presentationLeft.module.scss";
+import { useCardContext } from "../../../../../context/CardContext";
 
 
 function PresentationLeft() {
+   const {oneCard}=useCardContext();
 
-    const[urlItem,seturlItem]=useState<string | undefined>("Asgaardsofa3.png");
+    const[urlItem,seturlItem]=useState<string | undefined>(oneCard?.img);
     const[active,setActive]=useState<Array<string>>(["active","","",""]);
 
 
@@ -47,7 +49,7 @@ function PresentationLeft() {
   return (
      <div className={presentationLeftStyle.left}>
           <div className={presentationLeftStyle.listItem}>
-            <img onClick={handleItemChange} className={`${active[0]}`} src="/img/autresProduits/siege_simple.png" alt="siege_simple" />
+            <img onClick={handleItemChange} className={`${active[0]}`} src={`/img/autresProduits/${oneCard?.img}`} alt="siege_simple" />
             <img onClick={handleItemChange} className={`${active[1]}`} src="/img/autresProduits/flocon.png" alt="flocon" />
             <img onClick={handleItemChange} className={`${active[2]}`} src="/img/autresProduits/capot.png" alt="capot" />
             <img onClick={handleItemChange} className={`${active[3]}`} src="/img/autresProduits/berceau.png" alt="berceau" />

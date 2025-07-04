@@ -5,6 +5,7 @@ import "./select.scss"; // Import du fichier Sass
 interface SelectOption {
   value: string;
   label: string;
+  
 }
 
 interface CustomSelectProps {
@@ -12,13 +13,14 @@ interface CustomSelectProps {
   defaultValue?: string;
   placeholder?: string;
   disabled?: boolean;
+  reset?:string;
   onChange?: (value: string) => void;
 }
 
 function Select ({
   options,
-  defaultValue = '',
-  placeholder = 'Sélectionnez...',
+  defaultValue = "",
+  placeholder = "Sélectionnez...",
   disabled = false,
   onChange,
 }: CustomSelectProps) {
@@ -51,7 +53,7 @@ function Select ({
       className={`select ${disabled ? 'select--disabled' : ''} ${isOpen ? 'select--open' : ''}`}
     >
       <div className="select__header" onClick={() => !disabled && setIsOpen(!isOpen)}>
-        <span className="select__selected-value">{selectedLabel}</span>
+        <span className="select__selected-value">{disabled===false? selectedLabel:placeholder}</span>
         <span className="select__arrow">▼</span>
       </div>
 
