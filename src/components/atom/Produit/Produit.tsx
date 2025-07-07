@@ -1,22 +1,9 @@
 // import React from "react";
 import { Link } from "react-router";
 import card from "./Produit.module.scss";
-import { useCardContext } from "../../../context/CardContext";
+import { ProduitType } from "../../../context/CardContext";
 
 
-type ProduitType = {
-  nom: string;
-  descriptive: string;
-  prix_actuele: number;
-  prix_reel?: number;
-  devise?: string;
-  etat: string;
-  img: string;
-  solde: {
-    toogle: boolean;
-    pourcentage?: number;
-  };
-};
 
 interface ProduitProps {
   cards: ProduitType[];
@@ -27,13 +14,7 @@ interface ProduitProps {
 
 function Produit({ cards, rendererItem }: ProduitProps) {
 
-   const {setOneCard}=useCardContext();
 
-  const setOneProduit=(produit:ProduitType)=>{
-    
-  setOneCard({...produit})
-
-  }
   return (
     <>
       {cards.map((produit, index) => (
@@ -61,8 +42,8 @@ function Produit({ cards, rendererItem }: ProduitProps) {
 
           <div className={card.hover}>
 
-            <button type="button" className={card.add} onClick={()=>setOneProduit(produit)}> 
-              <Link to={"/Shop/oneProduit"}>
+          <button type="button" className={card.add} > 
+              <Link to={`/Shop/oneProduit/${produit.id}`}>
               Add to cart
               </Link>
 

@@ -16,7 +16,7 @@ function ListeProduit() {
     <section className={listeProduit.listeProduit}>
     
     <div className={listeProduit.produit}>
-      {card? <Produit rendererItem={12} cards={card.produits}/>:<p>Chargement...</p>}
+      {card? <Produit rendererItem={12} cards={card}/>:<p>Chargement...</p>}
     </div>
 
     

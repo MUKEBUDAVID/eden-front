@@ -1,16 +1,22 @@
 import PresentationLeft from "../../atom/PresentationLeft/PresentationLeft";
 import PresentationRight from "../PresentationRight/PresentationRight";
-import presentationStyle from"./presentation.module.scss"
+import presentationStyle from"./presentation.module.scss";
 
-function Presentation() {
+
+interface idProps {
+      id: number;
+    }
+
+function Presentation({id}:idProps) {
+  
 
  
 return (
     <section className={presentationStyle.presentation}>
 
-<PresentationLeft/>
+<PresentationLeft id={id}/>
 
-<PresentationRight/>
+<PresentationRight id={id}/>
     </section>
 
   )

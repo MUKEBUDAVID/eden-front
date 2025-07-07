@@ -17,7 +17,7 @@ return (
       <h3>Autres Produits</h3>
 
       <div className={autreProduits.listProduits}>
-      {card ? <Produit rendererItem={8} cards={card.produits} /> : <p>Chargement...</p>}
+      {card ? <Produit rendererItem={8} cards={card} /> : <p>Chargement...</p>}
       </div>
 
       <VoirePlus/>

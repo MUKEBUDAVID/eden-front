@@ -7,10 +7,12 @@ import Quantite from "../../atom/Quantite/Quantite";
 import Share from "../../atom/Share/Share";
 import rightStyle from"./PresentationRight.module.scss";
 
+interface idProps {
+      id: number;
+    }
 
 
-
-function PresentationRight() {
+function PresentationRight({id}:idProps) {
    
 
     return (
@@ -22,7 +24,7 @@ function PresentationRight() {
 
          <Description/>
 
-        <TypeChoisie/>
+        <TypeChoisie id={id}/>
 
         <Color/>
 

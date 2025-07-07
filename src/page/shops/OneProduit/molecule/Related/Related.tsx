@@ -13,7 +13,7 @@ function Related() {
       <h2>Related Products</h2>
 
 <div className={relatedStyle.listeProduit}>
-  {card? <Produit rendererItem={4} cards={card.produits}/>:<p>Chargement...</p>}
+  {card? <Produit rendererItem={4} cards={card}/>:<p>Chargement...</p>}
       
 
 </div>

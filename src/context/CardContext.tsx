@@ -1,6 +1,7 @@
 import {  createContext,useState ,Dispatch,SetStateAction, ReactNode, useEffect,useContext} from "react";
 
 export type ProduitType = {
+  id:number;
   nom: string;
   descriptive: string;
   prix_actuele: number;
@@ -8,22 +9,21 @@ export type ProduitType = {
   devise?: string;
   etat: string;
   img:string;
+  quantite?:number;
   solde: {
     toogle: boolean;
     pourcentage?: number;
   };
- size?:{
-    width:string,
-  length:string,
-  heigh:string
+ size:{
+  width:number,
+  length:number,
+  heigh:number
  }
 
 };
 
-type Cards = {
-  produits: ProduitType[];
- 
-};
+
+
 
 type propsType={
   children:ReactNode
@@ -31,11 +31,8 @@ type propsType={
 
 
 interface StateContextType {
-    card: Cards|null,
-    setCard: Dispatch<SetStateAction<Cards | null>>,
-
-    oneCard:ProduitType|null,
-    setOneCard:Dispatch<SetStateAction<ProduitType|null>>
+    card: ProduitType[]|null,
+    setCard: Dispatch<SetStateAction<ProduitType[] | null>>,
 
     buyCard: ProduitType[]|null,
     setBuyCard:Dispatch<SetStateAction< ProduitType[] | null>>
@@ -53,8 +50,7 @@ export const CardContext=createContext<StateContextType|undefined>(undefined);
 
 
 function CardContextProvider({children}:propsType){
-    const [card,setCard]= useState<Cards | null>(null);
-    const [oneCard,setOneCard]=useState<ProduitType |null>(null);
+    const [card,setCard]= useState<ProduitType[] | null>(null);
     const [buyCard,setBuyCard]=useState<ProduitType[] | null>(null)
 
  const getCard = async () => {
@@ -71,7 +67,9 @@ function CardContextProvider({children}:propsType){
     }
 
     const data = await response.json();
-    setCard(data);
+    
+    
+    setCard(data.produits);
     
   } catch (error) {
     console.error("Error fetching card data:", error);
@@ -79,7 +77,9 @@ function CardContextProvider({children}:propsType){
   }
 };
 useEffect(()=>{
-  getCard()
+  getCard();
+
+  
 
 
 },[])
@@ -87,7 +87,7 @@ useEffect(()=>{
 
 
     return(
-    <CardContext.Provider value={{card,setCard,oneCard,setOneCard,buyCard,setBuyCard}}>
+    <CardContext.Provider value={{card,setCard,buyCard,setBuyCard}}>
         {children}
 </CardContext.Provider>
     )

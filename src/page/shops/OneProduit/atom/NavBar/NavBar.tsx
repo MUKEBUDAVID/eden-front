@@ -1,13 +1,18 @@
-import {useState} from 'react'
+// import {useState} from 'react'
 import { Link } from "react-router";
 import navBarStyle from "./navBar.module.scss"
+import { useCardContext } from "../../../../../context/CardContext";
+
+ interface idProps {
+      id: number;
+    }
 
 
-function NavBar() {
-    const[name,setName]=useState<string>("kilelo");
+function NavBar({id}:idProps) {
 
-
-    console.log(setName);
+  
+  const {card}=useCardContext();
+   
     
     
   return (
@@ -22,7 +27,7 @@ function NavBar() {
 
         <div className={navBarStyle.separateur}></div>
 
-       <p className={navBarStyle.active}>{name}</p>
+       <p className={navBarStyle.active}>{card!=null?card[id].nom:null}</p>
 
           </div> 
         

@@ -1,13 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import presentationLeftStyle from "./presentationLeft.module.scss";
 import { useCardContext } from "../../../../../context/CardContext";
 
 
-function PresentationLeft() {
-   const {oneCard}=useCardContext();
+interface idProps {
+      id: number;
+    }
 
-    const[urlItem,seturlItem]=useState<string | undefined>(oneCard?.img);
-    const[active,setActive]=useState<Array<string>>(["active","","",""]);
+function PresentationLeft({id}:idProps) {
+
+const {card}=useCardContext();
+ const[urlItem,seturlItem]=useState<string | null>(null);
+ const[active,setActive]=useState<Array<string>>(["active","","",""]);
+
+
+useEffect(() => {
+  // Mettre à jour l'URL uniquement quand `card` est disponible
+  if (card && card[id]) {
+    seturlItem(card[id].img);
+  }
+}, [card, id]); // Déclenché quand `card` ou `id` change
+
+console.log(urlItem);
+   
+
+   
 
 
     const handleItemChange = (event: React.MouseEvent<HTMLImageElement>) => {
@@ -16,9 +33,14 @@ function PresentationLeft() {
 
   // Pour accéder au src, vous devez caster le target en HTMLImageElement
   const target = event.target as HTMLImageElement;
-  seturlItem(target.src.split('/').pop());
+  const src=target.src.split('/').pop() as string|null;
+
+  
+  
+  seturlItem(src);
+
    const alt=target.alt;
-  console.log(target.alt);
+ 
 
   switch (alt) {
     case "siege_simple":
@@ -49,7 +71,7 @@ function PresentationLeft() {
   return (
      <div className={presentationLeftStyle.left}>
           <div className={presentationLeftStyle.listItem}>
-            <img onClick={handleItemChange} className={`${active[0]}`} src={`/img/autresProduits/${oneCard?.img}`} alt="siege_simple" />
+            <img onClick={handleItemChange} className={`${active[0]}`} src={`/img/autresProduits/${urlItem}`} alt="siege_simple" />
             <img onClick={handleItemChange} className={`${active[1]}`} src="/img/autresProduits/flocon.png" alt="flocon" />
             <img onClick={handleItemChange} className={`${active[2]}`} src="/img/autresProduits/capot.png" alt="capot" />
             <img onClick={handleItemChange} className={`${active[3]}`} src="/img/autresProduits/berceau.png" alt="berceau" />

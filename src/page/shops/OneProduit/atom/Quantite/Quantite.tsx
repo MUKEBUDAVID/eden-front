@@ -1,9 +1,9 @@
 import {useState} from "react";
 import { Link } from "react-router";
 import quantiteStyle from "./quantite.module.scss"
-
+import { useCardContext } from "../../../../../context/CardContext";
 function Quantite() {
-
+const {setBuyCard,oneCard}=useCardContext();
  const [quantite,setQuantite]=useState<number>(0);
 
 
@@ -17,8 +17,9 @@ const value =event.currentTarget.value as string;
 
 
 if(value=="+" ){
-  setQuantite(quantite+1)
+  setQuantite(quantite+1);
 
+ setBuyCard([{...oneCard,quantite:quantite+1}])
 };
 
 
