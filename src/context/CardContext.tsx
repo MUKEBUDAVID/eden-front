@@ -1,5 +1,6 @@
 import {  createContext,useState ,Dispatch,SetStateAction, ReactNode, useEffect,useContext} from "react";
 
+
 export type ProduitType = {
   id:number;
   nom: string;
@@ -51,7 +52,8 @@ export const CardContext=createContext<StateContextType|undefined>(undefined);
 
 function CardContextProvider({children}:propsType){
     const [card,setCard]= useState<ProduitType[] | null>(null);
-    const [buyCard,setBuyCard]=useState<ProduitType[] | null>(null)
+    const [buyCard,setBuyCard]=useState<ProduitType[] | null>(null);
+   
 
  const getCard = async () => {
   try {
@@ -76,13 +78,32 @@ function CardContextProvider({children}:propsType){
     // Vous pourriez vouloir définir un état d'erreur ici
   }
 };
+
+//Au premier rendu, charger les données d'achat depuis localStorage
+   const loadFromLocalStorage = () => {
+      try {
+        const storedData = localStorage.getItem("BuyData");
+        if (storedData) {
+          setBuyCard(JSON.parse(storedData));
+        }
+      } catch (error) {
+        console.error("Failed to parse localStorage data:", error);
+      }
+    };
+    
+
+
 useEffect(()=>{
   getCard();
 
-  
-
+ loadFromLocalStorage();
 
 },[])
+
+//synchroniser les changements d'état vers localStorage
+ useEffect(() => {
+    localStorage.setItem("BuyData", JSON.stringify(buyCard));
+  }, [buyCard]);//S'exécute à chaque changement de state 
 
 
 

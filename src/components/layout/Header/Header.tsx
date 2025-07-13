@@ -1,10 +1,13 @@
 import { useState } from "react";
 import headerStyle from "./Header.module.scss";
 import { NavLink, Link } from "react-router";
-import AsideCard from "../../atom/AsideCard/AsideCard";
+import AsideCard from "../../molecule/AsideCard/AsideCard";
+
 
 function Header() {
-const [openCard,setOpenCard]=useState(true)
+const [openCard,setOpenCard]=useState(true);
+
+
 
 
 const toggleCard=()=>{
@@ -31,9 +34,9 @@ const toggleCard=()=>{
       <section className={headerStyle.header_right}>
       {openCard?
       <>
-            <img src="/img/globe.svg" alt="globe icon" />
-      <img src="/img/shopping-cart.svg" alt=" shopping-cart logo" onClick={toggleCard} />
-      <img src="/img/account.svg" alt=" account logo"  />
+      <img src="/img/globe.svg" alt="globe icon" className={headerStyle.iconImg} />
+      <img src="/img/shopping-cart.svg" alt=" shopping-cart logo" className={headerStyle.iconImg} onClick={toggleCard} />
+      <img src="/img/account.svg" alt=" account logo" className={headerStyle.iconImg} />
       </>
 
       : <AsideCard toggleCard={toggleCard}/>

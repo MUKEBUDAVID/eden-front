@@ -10,7 +10,8 @@
     flex-direction: row;
     justify-content: space-between;
     margin-left: 100px;
-    width: 250px;
+    width: max-content;
+    gap:10px;
     // background-color: coral;
 
 }

@@ -49,74 +49,21 @@ justify-content: space-between;
   font-family: "Montserrat", sans-serif;
  }
 
+ .CardToggleImg{
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   transition: all ease-in-out 100ms;
+ }
+ .CardToggleImg:active{
+   transform: scale(1.1);
+ }
+
  .buyCardList{
     height: 70%;
     width: 90%;
     // background-color: rgb(233, 213, 252);
     overflow-y: auto ;
- }
-
- .oneCard{
-    width: 100%;
-    height: 20%;
-    // background: #1eb111;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10px;
- }
-
- .imgProduit{
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
- }
-
- .intitule{
-    width: 60%;
-    height: 70%;
-    // background: #9e9a9a49;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
- }
-
- .intitule h4{
- color:black;
-  font-size: 1.7rem;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-
- }
-
-
- .prixAndQuantyti{
-    width: 50%;
-    // background-color: #aaa5a5;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
- }
-
- .prixAndQuantyti span:nth-child(1){
- color:black;
-  font-size: 1.4rem;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-
- }
-
-
-  .prixAndQuantyti span:nth-child(3){
-  color:map.get($theme-colors,primary ) ;
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-
  }
 
 

@@ -21,7 +21,6 @@ useEffect(() => {
   }
 }, [card, id]); // Déclenché quand `card` ou `id` change
 
-console.log(urlItem);
    
 
    

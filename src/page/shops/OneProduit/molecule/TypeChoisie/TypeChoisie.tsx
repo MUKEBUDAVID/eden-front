@@ -1,6 +1,6 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import typeChoisieStyle from "./TypeChoisie.module.scss";
-import { useCardContext } from '../../../../../context/CardContext';
+import {  useCardContext } from '../../../../../context/CardContext';
 import Select from "../../../../../components/atom/select/Select";
 
 
@@ -28,6 +28,17 @@ const[inputValue,setInputValue]=useState<inputValueType>({
 
 });
 
+
+
+  useEffect(() => {
+   
+    return () => {
+  updateItemSize(id,"","width");
+  updateItemSize(id,"","length");
+  updateItemSize(id,"","heigh");
+    };
+  }, []);
+
  const sizeOptions = [
     { value: "90cm", label: "90cm * 190cm" },
     { value: "120cm", label: "120cm * 190cm" },
@@ -43,37 +54,29 @@ const[inputValue,setInputValue]=useState<inputValueType>({
 }
 
 
-//   function supprimerDoublonsObjets(tableau:ProduitType[]) {
-//   const tableauSansDoublons = [];
-//   const set = new Set();
 
-//   for (const objet of tableau) {
-//     // Convertir l'objet en une chaîne JSON pour la comparaison
-//     const objetString = JSON.stringify(objet);
-
-//     if (!set.has(objetString)) {
-//       set.add(objetString);
-//       tableauSansDoublons.push(objet);
-//     }
-//   }
-
-//   return tableauSansDoublons;
-// }
-
- const updateItemQuantity = (identifian:number, newQuantity:string,taille:string) => {
-
-    setCard((prevItems) =>{
-
-  if (!prevItems) return null; // Gère le cas où prevItems est null
-
-    return  prevItems?.map(item => item.id===identifian?{...item,size: {...item.size,[taille]: newQuantity}}
-                : item
-      )
+const updateItemSize = (identifian: number, newSize: string, taille: string) => {
+  setCard(prevCard => {
+    // Si prevCard est null ou undefined, retourner un tableau vide (ou gérer l'erreur différemment)
+    if (!prevCard) {
+      console.error("prevCard is null or undefined");
+      return []; // ou throw new Error("Card state is not initialized");
     }
-    );
-    
-  } 
 
+    return prevCard.map(item => {
+      if (item.id === identifian) {
+        return {
+          ...item,
+          size: {
+            ...item.size,
+            [taille]: newSize
+          }
+        };
+      }
+      return item;
+    });
+  });
+};
   
 
 const divActiveInputClik=()=>{
@@ -88,7 +91,7 @@ const divActiveSelectClik=()=>{
 setSelectDisabled(false);
 setInputDisabled(true);
 
-
+/// reinitialisation de Input
 setInputValue({...inputValue,width:"",length:""})
 
   
@@ -111,7 +114,7 @@ setInputValue({...inputValue,[name]:value});
 
 taille={...taille,heigh:value};
    
- updateItemQuantity(id,value,name)
+ updateItemSize(id,value,name)
 
 
 
@@ -125,7 +128,7 @@ setInputValue({...inputValue,[name]:value});
 
 taille={...taille,heigh:value};
    
- updateItemQuantity(id,value,name)
+ updateItemSize(id,value,name)
 
 
 
@@ -138,7 +141,7 @@ setInputValue({...inputValue,[name]:value});
 
 taille={...taille,heigh:value};
    
- updateItemQuantity(id,value,name)
+ updateItemSize(id,value,name)
 
 
 
@@ -148,29 +151,28 @@ taille={...taille,heigh:value};
 
 }
 
+const selectSize=(value:string)=>{
+  const local=value.split("c");
+
+  updateItemSize(id,local[0],"width");
+  updateItemSize(id,"190","length");
+
+ 
+}
 
 
-
-
-
-
-
-
-    return (
+ return (
      <div className={ typeChoisieStyle.typeChoisie}>
             <span className={ typeChoisieStyle.size}>Size</span>
 
             <div className={ typeChoisieStyle.dimension}>
               <div className={ typeChoisieStyle.standart} onClick={divActiveSelectClik} >
-              <Select options={sizeOptions } disabled={SelectDisabled} />
+              <Select options={sizeOptions } onChange={(value)=>{ selectSize(value)
+              }} disabled={SelectDisabled} />
                </div>
 
 
-
-
-
-
-                  <div className={typeChoisieStyle.speciale}>
+                      <div className={typeChoisieStyle.speciale}>
                     <div className={typeChoisieStyle.taille} >
               <span>heigh *</span>
               <input type="number" name="heigh" required={true} title="cm" min={1} value={inputValue.heigh} onChange={customSizeClik} />
