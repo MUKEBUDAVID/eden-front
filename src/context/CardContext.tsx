@@ -10,7 +10,7 @@ export type ProduitType = {
   devise?: string;
   etat: string;
   img:string;
-  quantite?:number;
+  quantite:number;
   solde: {
     toogle: boolean;
     pourcentage?: number;

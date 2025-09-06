@@ -8,7 +8,7 @@ import Contact from "./page/contact/Contact.tsx";
 import Shop from "./page/shops/Shop.tsx";
 import CardContextProvider from "./context/CardContext.tsx";
 import OneProduit from "./page/shops/OneProduit/OneProduit.tsx";
-import Carts from "./page/shops/cards/Carts.tsx";
+import Carts from "./page/shops/carts/Carts.tsx";
 import Checkout from "./page/shops/Checkout/Checkout.tsx";
 
 createRoot(document.getElementById('root')!).render(
@@ -23,8 +23,8 @@ createRoot(document.getElementById('root')!).render(
 
       <Route path="/shop" element={<Shop />} >
       <Route path="oneProduit/:id" element={<OneProduit />} />
-      <Route path="Carts" element={<Carts />} />
-      <Route path="Checkout" element={< Checkout />} />
+      <Route path="Carts/:id" element={<Carts />} />
+      <Route path="Checkout/:id" element={< Checkout />} />
       
       </Route>
 

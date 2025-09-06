@@ -8,6 +8,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"skay.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-30
@@ -26,6 +27,7 @@
     "prix_actuele": 2500000,
     "devise":"fc",
      "img":"berceau.png",
+     "quantite":0,
     "solde":{
         "toogle":false
         }
@@ -40,6 +42,7 @@
     "prix_reel": 140000,
     "devise":"fc",
     "img":"etoko.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -60,6 +63,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"siege_simple.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -73,6 +77,7 @@
     "prix_actuele": 1500000,
     "devise":"fc",
     "img":"siege_delux.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -92,6 +97,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"flocon.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -112,6 +118,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"capot.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -131,6 +138,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"litMetallique.jpeg",
+    "quantite":0,
     "solde":{
         "toogle":false
       },
@@ -148,6 +156,7 @@
     "prix_actuele": 1500000,
     "devise":"fc",
     "img":"siege_delux.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -167,6 +176,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"flocon.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -187,6 +197,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"capot.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -205,6 +216,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"litMetallique.jpeg",
+    "quantite":0,
     "solde":{
         "toogle":false
       },
@@ -224,6 +236,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"skay.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-30
@@ -242,6 +255,7 @@
     "prix_actuele": 2500000,
     "devise":"fc",
      "img":"berceau.png",
+     "quantite":0,
     "solde":{
         "toogle":false
         },
@@ -261,6 +275,7 @@
     "prix_reel": 140000,
     "devise":"fc",
     "img":"etoko.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -275,6 +290,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"skay.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-30
@@ -293,6 +309,7 @@
     "prix_actuele": 2500000,
     "devise":"fc",
      "img":"berceau.png",
+     "quantite":0,
     "solde":{
         "toogle":false
         },
@@ -312,6 +329,7 @@
     "prix_reel": 140000,
     "devise":"fc",
     "img":"etoko.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -332,6 +350,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"siege_simple.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -350,6 +369,7 @@
     "prix_actuele": 1500000,
     "devise":"fc",
     "img":"siege_delux.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -369,6 +389,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"flocon.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -389,6 +410,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"capot.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -408,6 +430,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"litMetallique.jpeg",
+    "quantite":0,
     "solde":{
         "toogle":false
       },
@@ -425,6 +448,7 @@
     "prix_actuele": 1500000,
     "devise":"fc",
     "img":"siege_delux.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -444,6 +468,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"flocon.png",
+    "quantite":0,
     "solde":{
         "toogle":false
         
@@ -464,6 +489,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"capot.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-50
@@ -483,6 +509,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"litMetallique.jpeg",
+    "quantite":0,
     "solde":{
         "toogle":false
       }
@@ -497,6 +524,7 @@
     "devise":"fc",
     "etat":"new",
     "img":"skay.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-30
@@ -515,6 +543,7 @@
     "prix_actuele": 2500000,
     "devise":"fc",
      "img":"berceau.png",
+     "quantite":0,
     "solde":{
         "toogle":false
         },
@@ -535,6 +564,7 @@
     "prix_reel": 140000,
     "devise":"fc",
     "img":"etoko.png",
+    "quantite":0,
     "solde":{
         "toogle":true,
         "pourcentage":-50

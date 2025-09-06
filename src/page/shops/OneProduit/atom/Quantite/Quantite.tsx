@@ -102,7 +102,7 @@ const createPanier = () => {
 
               
 
-                 <Link to={"/Shop/Carts"} className={ quantiteStyle.addToCardt}  title="add to cart" onClick={createPanier}>
+                 <Link to={`/Shop/Carts/${id}`} className={ quantiteStyle.addToCardt}  title="add to cart" onClick={createPanier}>
                  Add To Cart
               </Link>
              
